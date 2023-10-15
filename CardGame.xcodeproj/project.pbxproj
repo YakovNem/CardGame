@@ -9,23 +9,31 @@
 /* Begin PBXBuildFile section */
 		B4640D262AD99B8200ED85F8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D252AD99B8200ED85F8 /* AppDelegate.swift */; };
 		B4640D282AD99B8200ED85F8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D272AD99B8200ED85F8 /* SceneDelegate.swift */; };
-		B4640D2A2AD99B8200ED85F8 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D292AD99B8200ED85F8 /* ViewController.swift */; };
+		B4640D2A2AD99B8200ED85F8 /* CardGameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D292AD99B8200ED85F8 /* CardGameViewController.swift */; };
 		B4640D2D2AD99B8200ED85F8 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4640D2B2AD99B8200ED85F8 /* Main.storyboard */; };
 		B4640D302AD99B8200ED85F8 /* CardGame.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = B4640D2E2AD99B8200ED85F8 /* CardGame.xcdatamodeld */; };
 		B4640D322AD99B8300ED85F8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B4640D312AD99B8300ED85F8 /* Assets.xcassets */; };
 		B4640D352AD99B8300ED85F8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B4640D332AD99B8300ED85F8 /* LaunchScreen.storyboard */; };
+		B4640D3E2ADA997100ED85F8 /* CardGameStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D3D2ADA997100ED85F8 /* CardGameStore.swift */; };
+		B4640D402ADAA06500ED85F8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */; };
+		B4640D422ADAA08C00ED85F8 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */; };
+		B4640D462ADAEB5800ED85F8 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		B4640D222AD99B8200ED85F8 /* CardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B4640D252AD99B8200ED85F8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		B4640D272AD99B8200ED85F8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		B4640D292AD99B8200ED85F8 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		B4640D292AD99B8200ED85F8 /* CardGameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameViewController.swift; sourceTree = "<group>"; };
 		B4640D2C2AD99B8200ED85F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		B4640D2F2AD99B8200ED85F8 /* CardGame.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CardGame.xcdatamodel; sourceTree = "<group>"; };
 		B4640D312AD99B8300ED85F8 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B4640D342AD99B8300ED85F8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B4640D362AD99B8300ED85F8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		B4640D3D2ADA997100ED85F8 /* CardGameStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardGameStore.swift; sourceTree = "<group>"; };
+		B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
+		B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
+		B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,14 +68,42 @@
 			children = (
 				B4640D252AD99B8200ED85F8 /* AppDelegate.swift */,
 				B4640D272AD99B8200ED85F8 /* SceneDelegate.swift */,
-				B4640D292AD99B8200ED85F8 /* ViewController.swift */,
+				B4640D442ADAA79000ED85F8 /* UI */,
+				B4640D3C2ADA987E00ED85F8 /* CoreData */,
+				B4640D432ADAA3DD00ED85F8 /* Supporting Files */,
+				B4640D362AD99B8300ED85F8 /* Info.plist */,
+			);
+			path = CardGame;
+			sourceTree = "<group>";
+		};
+		B4640D3C2ADA987E00ED85F8 /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D2E2AD99B8200ED85F8 /* CardGame.xcdatamodeld */,
+				B4640D3D2ADA997100ED85F8 /* CardGameStore.swift */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		B4640D432ADAA3DD00ED85F8 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
 				B4640D2B2AD99B8200ED85F8 /* Main.storyboard */,
 				B4640D312AD99B8300ED85F8 /* Assets.xcassets */,
 				B4640D332AD99B8300ED85F8 /* LaunchScreen.storyboard */,
-				B4640D362AD99B8300ED85F8 /* Info.plist */,
-				B4640D2E2AD99B8200ED85F8 /* CardGame.xcdatamodeld */,
 			);
-			path = CardGame;
+			path = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		B4640D442ADAA79000ED85F8 /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D292AD99B8200ED85F8 /* CardGameViewController.swift */,
+				B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */,
+				B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */,
+				B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */,
+			);
+			path = UI;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -141,10 +177,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B4640D2A2AD99B8200ED85F8 /* ViewController.swift in Sources */,
+				B4640D2A2AD99B8200ED85F8 /* CardGameViewController.swift in Sources */,
 				B4640D302AD99B8200ED85F8 /* CardGame.xcdatamodeld in Sources */,
 				B4640D262AD99B8200ED85F8 /* AppDelegate.swift in Sources */,
 				B4640D282AD99B8200ED85F8 /* SceneDelegate.swift in Sources */,
+				B4640D3E2ADA997100ED85F8 /* CardGameStore.swift in Sources */,
+				B4640D402ADAA06500ED85F8 /* StartViewController.swift in Sources */,
+				B4640D462ADAEB5800ED85F8 /* StatisticsCell.swift in Sources */,
+				B4640D422ADAA08C00ED85F8 /* StatisticsViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,11 +334,13 @@
 				DEVELOPMENT_TEAM = 8NG4R6TNYK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -322,11 +364,13 @@
 				DEVELOPMENT_TEAM = 8NG4R6TNYK;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = CardGame/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
