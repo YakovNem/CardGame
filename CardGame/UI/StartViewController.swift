@@ -17,10 +17,10 @@ class StartViewController: UIViewController {
     
     private var textLabel: UILabel = {
         let label = UILabel()
-        label.textAlignment = .justified
+        label.textAlignment = .center
         label.numberOfLines = 0
         label.text = """
-Вы попали в классическую игру "Камень. Ножницы. Бумага". Это простое, но увлекательное соревнование, где ваша задача - предсказать ход противника и выбрать выигрышный объект. Перед тем как начать, введите ваше имя. Это поможет нам сохранить ваши достижения и отразить ваш прогресс в таблице рекордов. После этого просто нажмите "Играть" и погрузитесь в игру!"
+Вы попали в классическую игру "Камень. Ножницы. Бумага".\n Перед тем как начать, введите ваше имя.
 """
         label.font = UIFont.systemFont(ofSize: 20)
         label.translatesAutoresizingMaskIntoConstraints = false
