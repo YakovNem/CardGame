@@ -51,7 +51,7 @@ class StatisticsCell: UITableViewCell {
     //MARK: - Configuration
     
     func configure(with player: Player, position: Int) {
-        nameLabel.text = player.name
+        nameLabel.text = player.name ?? ""
         scoreLabel.text = "Очки: \(player.score)"
         winsLabel.text = "Победы: \(player.wins)"
     }

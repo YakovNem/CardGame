@@ -18,6 +18,7 @@
 		B4640D402ADAA06500ED85F8 /* StartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */; };
 		B4640D422ADAA08C00ED85F8 /* StatisticsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */; };
 		B4640D462ADAEB5800ED85F8 /* StatisticsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */; };
+		B4640D492ADBE6C200ED85F8 /* StatisticsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4640D482ADBE6C200ED85F8 /* StatisticsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StartViewController.swift; sourceTree = "<group>"; };
 		B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewController.swift; sourceTree = "<group>"; };
 		B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsCell.swift; sourceTree = "<group>"; };
+		B4640D482ADBE6C200ED85F8 /* StatisticsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,10 +102,43 @@
 			children = (
 				B4640D292AD99B8200ED85F8 /* CardGameViewController.swift */,
 				B4640D3F2ADAA06500ED85F8 /* StartViewController.swift */,
-				B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */,
-				B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */,
+				B4640D472ADBE69600ED85F8 /* Statistics */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		B4640D472ADBE69600ED85F8 /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D4C2ADBE6F300ED85F8 /* ViewController */,
+				B4640D4B2ADBE6E500ED85F8 /* ViewModel */,
+				B4640D4A2ADBE6D700ED85F8 /* View */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		B4640D4A2ADBE6D700ED85F8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D452ADAEB5800ED85F8 /* StatisticsCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B4640D4B2ADBE6E500ED85F8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D482ADBE6C200ED85F8 /* StatisticsViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B4640D4C2ADBE6F300ED85F8 /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				B4640D412ADAA08C00ED85F8 /* StatisticsViewController.swift */,
+			);
+			path = ViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -185,6 +220,7 @@
 				B4640D402ADAA06500ED85F8 /* StartViewController.swift in Sources */,
 				B4640D462ADAEB5800ED85F8 /* StatisticsCell.swift in Sources */,
 				B4640D422ADAA08C00ED85F8 /* StatisticsViewController.swift in Sources */,
+				B4640D492ADBE6C200ED85F8 /* StatisticsViewModel.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     private var players: [Player] = []
     private let tableView = UITableView()
     private let store = CardGameStore()
+    private let viewModel = StatisticsViewModel()
     
     weak var delegate: StatisticsViewControllerDelegate?
     
@@ -45,8 +46,9 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     override func viewDidLoad() {
         super.viewDidLoad()
         setupTableView()
-        loadData()
         setupLayout()
+        setupBindings()
+        viewModel.fetchPlayers()
     }
     
     //MARK: - Setup Methods
@@ -86,17 +88,25 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
         dismiss(animated: true, completion: nil)
     }
     
-    private func loadData() {
-        store.fetchPlayers { (players, error) in
-            if let players = players {
-                self.players = players.sorted(by: { $0.score > $1.score })
-                self.emptyLabel.isHidden = !self.players.isEmpty
-                DispatchQueue.main.async {
-                    self.tableView.reloadData()
-                }
-            } else if let error = error {
-                print("Failed to fetch players: \(error)")
-                self.emptyLabel.isHidden = false
+    private func setupBindings() {
+        viewModel.dataUpdated = { [weak self] in
+            DispatchQueue.main.async {
+                self?.tableView.reloadData()
+                self?.emptyLabel.isHidden = self?.viewModel.numberOfPlayers != 0
+            }
+        }
+        
+        viewModel.showError = { [weak self] error in
+            DispatchQueue.main.async {
+                let alert = UIAlertController(title: "Ошибка",
+                                              message: error,
+                                              preferredStyle: .alert)
+                
+                alert.addAction(UIAlertAction(title: "ОК",
+                                              style: .default,
+                                              handler: nil))
+                
+                self?.present(alert, animated: true, completion: nil)
             }
         }
     }
@@ -104,13 +114,13 @@ class StatisticsViewController: UIViewController, UITableViewDataSource, UITable
     // MARK: - UITableViewDataSource
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return players.count
+        return viewModel.numberOfPlayers
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: StatisticsCell.identifier, for: indexPath) as! StatisticsCell
-        let player = players[indexPath.row]
-        cell.configure(with: player, position: indexPath.row + 1)
+        let player = viewModel.getPlayer(at: indexPath.row)
+        cell.configure(with: player, position: indexPath.row)
         return cell
     }
 }
